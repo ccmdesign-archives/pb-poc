@@ -1,0 +1,30 @@
+.sidebar {
+  background-color: #f8f8f8;
+  padding: 0 30px;
+}
+
+.logo {
+  max-width: 100%;
+  padding: 40px 60px;
+  margin-bottom: 30px;
+}
+
+.filter {
+  padding-bottom: 20px;
+
+  label {
+    display: block;
+    padding: 0 15px 10px;
+    color: #333;
+  }
+
+  select {
+    font-family: "alwyn-new-web", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+  }
+}
+
+.sidebar-single {
+}

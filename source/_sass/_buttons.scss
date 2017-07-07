@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  padding: 20px;
+  background-color: rgba(white, .1);
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "alwyn-new-web", sans-serif;
+  font-weight: 200;
+
+  i { font-size: 2rem; }
+}
+
+.button:hover {
+  background-color: rgba(white, .2);
+}
+
+.button--main-color {
+  background-color: $main-color;
+
+  &:hover { background-color: darken($main-color, 6); }
+}
+
+.button--block {
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+// .main-wrapper {
+//   display: flex;
+// }
+
+// .sidebar {
+//   width: $sidebar-width;
+
+//   @include breakpoint($touch) { display: none; }
+// }
+
+// .main-content {
+//   flex: 1;
+//   @include breakpoint($large) { padding: 40px; }
+//   @include breakpoint($touch) { padding: 20px; }
+//   @include breakpoint($small-only) { padding: 10px; }
+// }
+
+.main-wrapper {
+  
+}
+
+.sidebar {
+  width: $sidebar-width;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  @include breakpoint($touch) { display: none; }
+}
+
+.main-content {
+  margin-left: $sidebar-width;
+
+  @include breakpoint($large) { padding: 40px; }
+  @include breakpoint($touch) { padding: 20px; }
+  @include breakpoint($small-only) { padding: 10px; }
+}
