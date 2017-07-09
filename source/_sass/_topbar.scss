@@ -1,5 +1,6 @@
 .topbar {
   background-color: rgba(black, .05);
+  box-shadow: 1px 1px 4px rgba(black, .2);
 
   &__logo { 
     padding: 2px 0;
@@ -10,6 +11,7 @@
       padding: 2px;
       @include breakpoint($touch) { display: none; }
     }
+
     .logo--icon { 
       height: 44px;
       padding: 6px;
@@ -18,10 +20,7 @@
   }
 
   .button {
-
-    i, span {
-      color: rgba(black, .3);
-    }
+    i, span { color: rgba(black, .3); }
     
     > span {
       font-size: 1rem;
