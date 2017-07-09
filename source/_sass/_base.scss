@@ -57,9 +57,11 @@ p {
   a {
     color: darken($main-color, 8);
     &:hover { background-color: rgba($main-color, .1); }
-  }
+  } 
+}
 
-  
+code {
+  font-family: "Lucida Console", "Courier New", monospace;;
 }
 
 

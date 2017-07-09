@@ -1,14 +1,24 @@
 .list-group {
+  &:not(:first-of-type) { margin-top: 30px; }
+  
   &__header {
-    margin-bottom: 20px;
-    @include breakpoint($large) { display: flex; }
+    
+    margin-bottom: 10px;
+    @include breakpoint($large) { 
+      display: flex; 
+      margin-bottom: 20px;
+    }
 
     h1 {
-      font-size: 3rem;
+      font-size: 1.6rem;
       padding: 15px;
       color: white;
+      
       margin-bottom: 10px;
-      @include breakpoint($large) { margin-bottom: 0; }
+      @include breakpoint($large) { 
+        margin-bottom: 0; 
+        font-size: 3rem;
+      }
     }
 
     p {
@@ -36,10 +46,12 @@
   }
 
   &__item {
+    padding-bottom: 10px;
     
-    padding-bottom: 20px;
-    
-    @include breakpoint($large) { width: 50%; }
+    @include breakpoint($large) { 
+      width: 50%; 
+      padding-bottom: 20px;
+    }
 
     &:nth-child(even) {
       @include breakpoint($large) { padding-left: 20px; }

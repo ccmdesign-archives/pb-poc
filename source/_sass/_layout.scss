@@ -36,6 +36,5 @@
   }
 
   @include breakpoint($large) { padding: 40px; }
-  @include breakpoint($touch) { padding: 20px; }
-  @include breakpoint($small-only) { padding: 0; }
+  @include breakpoint($touch) { padding: 0; }
 }
