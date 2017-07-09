@@ -2,21 +2,34 @@
 layout: default
 title: Org Id Guide
 ---
-
+{% include topbar.html %}
 <main class="main-wrapper" role="main"> <!-- main content starts here -->
-  {% include sidebar-single.html %}
-  
   <div class="main-content single-content">
-    <div class="single-content__logo">
-      <img src="images/org-id-logo-horizontal.png" alt="" class="logo">
-      <a class="button" href="/index.html"><i class="material-icons">arrow_backward</i></a>
-    </div>
-
     <header class="single-content__header">
-      <h1>Danish Central Business Register <span>(DK-CVR)</span></h1>
       <a href="#" class="button"><i class="material-icons">link</i></a>
+      <h1>Danish Central Business Register <span>(DK-CVR)</span></h1>
     </header>
+    <aside class="single-content__sidebar single-sidebar">
+      <div class="single-sidebar__block quality-chart">
+        <div class="quality-chart__inner">
+          <div class="circle">
+            <span>45</span>  
+          </div>
+        </div>
+      </div>
+      <div class="single-sidebar__block single-sidebar--dark ">
+        <p>The code for this list is <code>DK-CVR</code>. When you can located the organisation you wish to identify in this list, you should either:</p>
+        <p>Enter it in an identifier database field prefixed with <code>DK-CVR</code>.</p>
+        <h4>Example</h4>
+        <pre>
+<code>DK-CVR-[ IDENTIFIER ]</code>
+        </pre>
+        <p>Or, use it within a two-part identifier, with <code>DK-CVR</code> as the 'scheme', and the identifier you have located as the 'identifier' field. </p>
+      </div>
+    </aside>
+
     <section class="single-content__main">
+
       <div class="single-content__block single-description">
         <h2>Description</h2>
         <p>The CBR is the national body for registering companies and maintaining this information in Denmark. The Central Business Register at Virk is available with English headings and categories. It can be used to search for information on all Danish businesses.</p>
@@ -53,32 +66,6 @@ title: Org Id Guide
 
       
     </section>
-  
-    <aside class="single-content__sidebar single-sidebar">
-      <div class="single-sidebar__block quality-chart">
-        <div class="quality-chart__inner">
-          <div class="circle">
-            <span>45</span>  
-          </div>
-        </div>
-      </div>
-      
-      <!-- <div class="single-sidebar__block">
-        <h3>To find identifiers</h3>
-        <p>Visit <a href="https://datacvr.virk.dk/data/" target="_blank">this website</a>. It is possible to search for identifiers on this <a href="https://datacvr.virk.dk/data/" target="_blank">database</a>. <a href="https://datacvr.virk.dk/data/?language=en-gb&" target="_blank">This is the English version</a></p>
-        <p>Identifiers are underneath the CVR heading.</p>
-        <p>Extracts from the register are also available <a href="https://datacvr.virk.dk/data/cvr-hj%C3%A6lp/cvr-udtr%C3%A6k" target="_blank">here</a></p>
-      </div> -->
-      <div class="single-sidebar__block single-sidebar--dark">
-        <p>The code for this list is <code>DK-CVR</code>. When you can located the organisation you wish to identify in this list, you should either:</p>
-        <p>Enter it in an identifier database field prefixed with <code>DK-CVR</code>.</p>
-        <h4>Example</h4>
-        <pre>
-<code>DK-CVR-[ IDENTIFIER ]</code>
-        </pre>
-        <p>Or, use it within a two-part identifier, with <code>DK-CVR</code> as the 'scheme', and the identifier you have located as the 'identifier' field. </p>
-      </div>
-    </aside>
   </div>
 </main>
 

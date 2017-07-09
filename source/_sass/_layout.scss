@@ -30,7 +30,10 @@
 }
 
 .main-content {
-  margin-left: $sidebar-width;
+  .sidebar ~ & { 
+    margin-left: $sidebar-width;
+    @include breakpoint($touch) { margin-left: 0; }
+  }
 
   @include breakpoint($large) { padding: 40px; }
   @include breakpoint($touch) { padding: 20px; }

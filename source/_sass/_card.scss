@@ -21,12 +21,21 @@
         white-space: nowrap;
         overflow: hidden;
       }
+
+      @include breakpoint($touch) {
+        font-size: 1.2rem;
+        font-weight: 200;
+      }
     }
 
     h3 {
       font-size: 1.2rem;
       margin-top: 10px;
       font-weight: 100;
+      @include breakpoint($touch) {
+        font-size: 1rem;
+        opacity: .6;
+      }
     }
   }
 
@@ -47,7 +56,11 @@
     @include breakpoint($small-only) { flex-direction: column; }
     @include breakpoint(1380px) { margin-left: 15px; }
   }
-  &__text { flex: 4; }
+  
+  &__text { 
+    flex: 4;
+    @include breakpoint($touch) { font-size: 1rem; }
+  }
 
   &__controls {
     background-color: rgba(black, .7);
