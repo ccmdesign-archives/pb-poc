@@ -3,110 +3,60 @@ layout: default
 title: Org Id Guide
 ---
 
-{% include topbar.html %}
-
-<main class="main-wrapper" role="main"> <!-- main content starts here -->
-  {% include sidebar.html %}
-  
-  <div class="main-content">
-    <section class="list-group list-group--suggested">
-      <header class="list-group__header">
-        <h1>Suggested Lists</h1>
-        <p>We think one of the lists below will have a good chance <br> of including the organisation(s) you are looking for...</p>
-      </header>
-
-      <div class="list-group__main">
-        {% for i in site.data.lists.lists limit:3 %}
-        <div class="list-group__item">
-          <article class="card card--suggested">
-            <header class="card__header">
-              <div class="card__score">{{i.quality}}</div>
-              <h2 title="{{i.name.en}}">{{i.name.en}}</h2>
-              <h3>{{i.code}}</h3>
-            </header>
-            <section class="card__main">
-              <div class="card__text">
-                <p>{{i.description.en | truncate: 520}}</p>
-              </div>
-              <aside class="card__sidebar">
-                <ul class="categories categories--countries">
-                  <h4>Countries</h4>
-                  {% for j in i.coverage %}
-                  <li>{{j}}</li>
-                  {% endfor %}
-                </ul>
-                <ul class="categories categories--sectors">
-                  <h4>Sectors</h4>
-                  {% for j in i.sector %}
-                  <li>{{j}}</li>
-                  {% endfor %}
-                </ul>
-              </aside>
-            </section>  
-            
-            <footer class="card__controls">
-              <a href="{{i.access.publicDatabase}}" class="button" target="_blank" title="{{i.access.onlineAccessDetails}}"><i class="material-icons">link</i></a>
-              <div class="card__list-code">
-                <p>List Code <code>{{i.code}}</code></p>
-              </div>
-              <a href="single.html" class="button"><i class="material-icons">zoom_out_map</i></a>
-            </footer>
-          </article>
-        </div>
-        {% endfor %}
-      
-      </div>
-    </section>
-    
-    <section class="list-group list-group--possible">
-      <header class="list-group__header">
-        <h1>Possible Lists</h1>
-        <p>It's possible you will find the organisation(s) <br>you are looking for in one of the lists below...</p>
-      </header>
-
-      <div class="list-group__main">
-        {% for i in site.data.lists.lists limit:3 %}
-        <div class="list-group__item">
-          <article class="card card--possible">
-            <header class="card__header">
-              <div class="card__score">{{i.quality}}</div>
-              <h2 title="{{i.name.en}}">{{i.name.en}}</h2>
-              <h3>{{i.code}}</h3>
-            </header>
-            <section class="card__main">
-              <div class="card__text">
-                <p>{{i.description.en | truncate: 520}}</p>
-              </div>
-              <aside class="card__sidebar">
-                <ul class="categories categories--countries">
-                  <h4>Countries</h4>
-                  {% for j in i.coverage %}
-                  <li>{{j}}</li>
-                  {% endfor %}
-                </ul>
-                <ul class="categories categories--sectors">
-                  <h4>Sectors</h4>
-                  {% for j in i.sector %}
-                  <li>{{j}}</li>
-                  {% endfor %}
-                </ul>
-              </aside>
-            </section>  
-            
-            <footer class="card__controls">
-              <a href="{{i.access.publicDatabase}}" class="button" target="_blank" title="{{i.access.onlineAccessDetails}}"><i class="material-icons">link</i></a>
-              <div class="card__list-code">
-                <p>List Code <code>{{i.code}}</code></p>
-              </div>
-              <a href="single.html" class="button"><i class="material-icons">zoom_out_map</i></a>
-            </footer>
-          </article>
-        </div>
-        {% endfor %}
-      
-      </div>
-    </section>
-    
+<main class="main-wrapper homepage" role="main"> <!-- main content starts here -->
+  <div class="homepage__topbar">
+    <a href="#" class="button button--icon-only button--float-right"><i class="material-icons">file_download</i></a>
+    <a href="#" class="button button--float-right button--transparent">About</a>
   </div>
+  <img class="homepage__logo" src="/images/org-id-logo-full.png" alt="">
+  <form class="homepage__form" action="" >
+    <label class="homepage__field" for="">
+      I need identifiers for 
+      <span class="homepage__select">
+        <select name="" id="">
+          <option value="">a company</option>    
+          <option value="">a non-profit</option>    
+          <option value="">a charity</option>    
+        </select>
+      </span>
+    </label>
+    <label class="homepage__field" for="">
+      In particular 
+      <span class="homepage__select">
+        <select name="" id="">
+          <option value="">a limited company</option>    
+        </select>  
+      </span>
+    </label>
+    <label class="homepage__field" for="">
+      Registered in
+      <span class="homepage__select">
+        <select name="" id="">
+          <option value="">any country</option>    
+          <option value="">any country</option>    
+          <option value="">any country</option>    
+          <option value="">any country</option>    
+        </select>
+      </span>
+    </label>
+    <label class="homepage__field" for="">
+      Working in 
+      <span class="homepage__select">
+        <select name="" id="">
+          <option value="">education</option>    
+          <option value="">education</option>    
+          <option value="">education</option>    
+          <option value="">education</option>    
+        </select>
+      </span>
+    </label>
+
+    <div class="homepage__field">
+      <a class="homepage__button" href="/listing.html" >See Lists</a>
+    </div>
+  </form>
+  <footer>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et atque quibusdam dolores veritatis beatae pariatur quaerat maiores. Atque voluptas assumenda, iusto quod. Reprehenderit hic harum, unde inventore sit nulla, earum.</p>
+  </footer>
 </main>
 

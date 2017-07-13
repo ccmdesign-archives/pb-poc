@@ -30,9 +30,9 @@
   background-color: rgba(white, .2);
 }
 
+
 .button--main-color {
   background-color: $main-color;
-
   &:hover { background-color: darken($main-color, 6); }
 }
 
@@ -43,3 +43,5 @@
 
 .button--float-left { float: left;}
 .button--float-right { float: right;}
+.button--icon-only { padding: 10px !important; }
+.button--transparent { background-color: transparent; }
