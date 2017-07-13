@@ -14,9 +14,8 @@
       padding: 15px;
       color: white;
       
-      margin-bottom: 10px;
       @include breakpoint($large) { 
-        margin-bottom: 0; 
+        margin-bottom: 10px;
         font-size: 3rem;
       }
     }
