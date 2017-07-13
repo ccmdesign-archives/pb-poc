@@ -1,4 +1,6 @@
 .topbar {
+  @include breakpoint($large) {display: none; }
+  
   background-color: rgba(black, .05);
   box-shadow: 1px 1px 4px rgba(black, .2);
 
