@@ -1,11 +1,11 @@
 .homepage {
   text-align: center;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 
   &__logo {
     max-width: 421px;
-    width: 100%;
+    width: 80%;
   }
 
   &__topbar {
@@ -31,6 +31,7 @@
   &__field {
     display: block;
     font-size: 2rem;
+    @include breakpoint($touch) { font-size: 1.4rem; }
     margin-bottom: 30px;
     color: rgba(black, .6);
   }
@@ -43,6 +44,7 @@
       @extend .u-material-icons;
       content: 'keyboard_arrow_down';
       font-size: 2rem;
+      @include breakpoint($touch) { font-size: 1.4rem; }
       padding: 5px 0;
       color: $main-color;
       position: absolute;
@@ -59,6 +61,7 @@
       &::-ms-expand { display: none; /* hide the default arrow in ie10 and ie11 */ }
 
       font-size: 2rem;
+      @include breakpoint($touch) { font-size: 1.4rem; }
       font-family: "alwyn-new-web", sans-serif;
       font-weight: 300;
       color: $main-color;
@@ -73,6 +76,7 @@
   &__button {
     font-family: "alwyn-new-web", sans-serif;
     font-size: 1.5rem;
+    @include breakpoint($touch) { font-size: 1.2rem; }
     font-weight: 300;
     text-transform: uppercase;
     background-color: rgba(black, .1);
