@@ -2,8 +2,8 @@
   &:not(:first-of-type) { margin-top: 30px; }
   
   &__header {
-    
-    margin-bottom: 10px;
+    margin: 0;
+
     @include breakpoint($large) { 
       display: flex; 
       margin-bottom: 20px;
@@ -14,10 +14,7 @@
       padding: 15px;
       color: white;
       
-      @include breakpoint($large) { 
-        margin-bottom: 10px;
-        font-size: 3rem;
-      }
+      @include breakpoint($large) { font-size: 3rem; }
     }
 
     p {
@@ -30,11 +27,6 @@
 
       @include breakpoint($large) { margin-left: 7px; }
       @include breakpoint($small-only) {display: none;}
-      
-      br {
-        @include breakpoint( (max-width 1200px) ) { display: none; }  
-      }
-      
     }
   }
   

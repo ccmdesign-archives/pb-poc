@@ -12,7 +12,7 @@ title: Org Id Guide
     <section class="list-group list-group--suggested">
       <header class="list-group__header">
         <h1>Suggested Lists</h1>
-        <p>We think one of the lists below will have a good chance <br> of including the organisation(s) you are looking for...</p>
+        <p>We think one of the lists below will have a good chance of including the organisation(s) you are looking for...</p>
       </header>
 
       <div class="list-group__main">
@@ -35,12 +35,15 @@ title: Org Id Guide
                   <li>{{j}}</li>
                   {% endfor %}
                 </ul>
+                
+                {% if i.sector %}
                 <ul class="categories categories--sectors">
                   <h4>Sectors</h4>
                   {% for j in i.sector %}
                   <li>{{j}}</li>
                   {% endfor %}
                 </ul>
+                {% endif %}
               </aside>
             </section>  
             
@@ -61,7 +64,7 @@ title: Org Id Guide
     <section class="list-group list-group--possible">
       <header class="list-group__header">
         <h1>Possible Lists</h1>
-        <p>It's possible you will find the organisation(s) <br>you are looking for in one of the lists below...</p>
+        <p>It's possible you will find the organisation(s) you are looking for in one of the lists below...</p>
       </header>
 
       <div class="list-group__main">
@@ -109,4 +112,5 @@ title: Org Id Guide
     
   </div>
 </main>
+
 

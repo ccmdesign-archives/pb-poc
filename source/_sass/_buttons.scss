@@ -1,6 +1,5 @@
 .button {
   display: inline-block;
-  
   background-color: rgba(white, .1);
   color: white;
   cursor: pointer;
@@ -8,16 +7,9 @@
   font-family: "alwyn-new-web", sans-serif;
   font-weight: 200;
   vertical-align: top;
+  padding: 13px 13px 11px 13px;  
 
-  @include breakpoint($touch) {
-    padding: 12px;  
-    i { font-size: 1.4rem; }
-  }
-
-  @include breakpoint($large) {
-    padding: 20px;
-    i { font-size: 2rem; }
-  }
+  i { font-size: 1.4rem; }
 
   span {
     display: inline-block;
