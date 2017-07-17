@@ -1,11 +1,40 @@
 .sidebar {
   background-color: #f8f8f8;
   padding: 0 30px;
+  display: flex;
+  flex-direction: column;
   
   &__logo img {
     max-width: 100%;
     padding: 40px 60px;
     margin-bottom: 30px;
+  }
+
+  .button {
+    span {
+      margin: 0 0 0 25px;
+    }
+
+  }
+
+  &__main {
+    flex: 1;
+  }
+
+  &__footer {
+    padding: 20px 0 40px;
+    border-top: 1px solid rgba(black, .1);
+
+    .button {
+      color: rgba(black, .4);
+      text-align: center;
+      font-size: .9rem;
+      border: 1px solid transparent;
+
+      &:hover {
+        border-color: rgba(black, .1);
+      }
+    }
   }
 }
 
@@ -28,5 +57,3 @@
   }
 }
 
-.sidebar-single {
-}

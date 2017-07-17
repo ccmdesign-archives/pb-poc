@@ -4,6 +4,7 @@ title: Org Id Guide
 ---
 {% include topbar.html %}
 <main class="main-wrapper" role="main"> <!-- main content starts here -->
+  {% include sidebar.html %}
   <div class="main-content single-content">
     <header class="single-content__header">
       <a href="#" class="button"><i class="material-icons">link</i></a>
@@ -13,6 +14,10 @@ title: Org Id Guide
       <div class="single-sidebar__block quality-chart" data-chart="70">
         <div id="chart1" class="quality-chart__inner"></div>
       </div>
+      <div class="single-sidebar__block">
+        <p>List Type: <span>Secondary</span></p>
+      </div>
+      
       <div class="single-sidebar__block single-sidebar--dark">
         <p>The code for this list is <code>DK-CVR</code>. When you can located the organisation you wish to identify in this list, you should either:</p>
         <p>Enter it in an identifier database field prefixed with <code>DK-CVR</code>.</p>
@@ -45,9 +50,6 @@ title: Org Id Guide
           </li>
           <li class="single-categories__item single-categories--sectors">
             <p>Sectors: <span>Charity, Company</span></p>
-          </li>
-          <li class="single-categories__item">
-            <p>List Type: <span>Secondary</span></p>
           </li>
           <li class="single-categories__item">
             <p>Confirmed: <span>Yes</span></p>
