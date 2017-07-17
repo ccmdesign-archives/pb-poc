@@ -3,11 +3,18 @@
     IF single.html, click goes to list.html 
     IF list.html click goes to index.html
   -->
-
-  <a href="/index.html" class="button button--float-left"><i class="material-icons">arrow_back</i></a>
-  <a href="#" class="button button--float-right"><span>About</span></a>
-  <a href="#" class="button button--float-right"><i class="material-icons">file_download</i></a>
-  <div class="topbar__logo">
-    <img class="logo--icon" src="/images/org-id-logo.png" alt="ORG ID Guide">
+  
+  <div class="topbar__left">
+    <a href="/index.html" class="button button__icon-only"><i class="material-icons">arrow_back</i></a>  
   </div>
+
+  <div class="topbar__center topbar__logo">
+    <a href="/index.html"><img class="logo--icon" src="/images/org-id-logo.png" alt="ORG ID Guide"></a>
+  </div>
+
+  <div class="topbar__right">
+    <a href="#" class="button topbar__extra"><span>About</span></a>
+    <a href="#" class="button button__icon-only topbar__extra"><i class="material-icons">file_download</i></a>
+  </div>
+  
 </div>

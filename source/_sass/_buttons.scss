@@ -33,7 +33,10 @@
   display: block;
 }
 
-.button--float-left { float: left;}
-.button--float-right { float: right;}
 .button--icon-only { padding: 10px !important; }
 .button--transparent { background-color: transparent; }
+
+
+// Probably will delete these styles
+.button--float-left { float: left;}
+.button--float-right { float: right;}

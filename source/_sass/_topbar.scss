@@ -1,8 +1,19 @@
 .topbar {
   @include breakpoint($large) {display: none; }
-  
+  position: relative;
   background-color: rgba(black, .05);
   box-shadow: 1px 1px 4px rgba(black, .2);
+  
+  &__left,
+  &__right {
+    position: absolute;
+    top: 0;
+  }
+
+  &__right { right: 0; }
+
+  &__center { text-align: center; }
+
 
   &__logo { 
     padding: 2px 0;
@@ -14,14 +25,18 @@
     }
   }
 
+  &__extra {
+    @include breakpoint($small-only) { display: none; }
+  }
+
   .button {
     i, span { color: rgba(black, .3); }
     
     > span {
-      font-size: 1.2rem;
+      font-size: 1rem;
       display: inline-block;
       margin: 0;
-      padding: 0 10px;
+      padding: 3px 10px;
     }
   }
 }
