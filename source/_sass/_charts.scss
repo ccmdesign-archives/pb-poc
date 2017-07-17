@@ -1,7 +1,6 @@
 // Single Page Chart
 
 .quality-chart.quality-chart {
-  background-color: $second-color;
   position: relative;
 
   @include breakpoint($touch) { 
@@ -16,6 +15,7 @@
     height: 0;
     padding-bottom: 100%;
     margin-top: 40px;
+    margin-bottom: 0;
   }
 
   &:before {
@@ -67,7 +67,45 @@
     width: 100%;
     height: 100%;
   }
+
+  &--high { background-color: $high-color; }
+  &--medium { background-color: $second-color; }
+  &--low { background-color: $negative-color; }
 }
+
+.quality-chart__list-type {
+  padding: 10px 30px;
+  background-color: red;
+  @include breakpoint($touch) { display: none; }
+}
+
+
+
+.quality-chart__list-type {
+  margin-bottom: 20px;
+  p {
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+  &.quality-chart--high { 
+    background-color: rgba($high-color, .2); 
+    color: $high-color;
+  }
+
+  &.quality-chart--medium { 
+    background-color: rgba($second-color, .2); 
+    color: $second-color;
+  }
+
+  &.quality-chart--low { 
+    background-color: rgba($negative-color, .2);
+    color: $negative-color;
+  }
+}
+
+
 
 
 // Removing Styles from HighCharts

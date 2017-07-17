@@ -91,17 +91,14 @@
 }
 
 .single-meta-info {
-  display: flex;
-
-  @include breakpoint($touch) { flex-direction: column; }
 
   &__instructions {
     background-color: rgba(black, .1); 
     padding: 30px;
-    flex: 2;
+    margin-bottom: 10px;
+
     @include breakpoint($touch) { 
       padding: 20px 15px; 
-      margin-bottom: 0;
     }
 
     h3 {
@@ -111,8 +108,12 @@
   }
 
   &__categories {
-    flex: 1;
-    @include breakpoint($large) { padding-left: 20px; }
+    margin-bottom: 10px;
+    
+    li {
+      margin-bottom: 10px;
+      padding: 10px 30px;
+    }
   }
 }
 
