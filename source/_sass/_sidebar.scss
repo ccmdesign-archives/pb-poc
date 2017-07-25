@@ -26,15 +26,23 @@
   &__footer {
     padding: 20px 0 40px;
     border-top: 1px solid rgba(black, .1);
+    text-align: center;
+
+    h5 {
+      font-size: .9rem;
+      margin: 20px 0 10px;
+      color: rgba(black, .6);
+    }
 
     .button {
       color: rgba(black, .4);
       text-align: center;
       font-size: .9rem;
-      border: 1px solid transparent;
+      border: 1px solid rgba(black, .1);
 
       &:hover {
-        border-color: rgba(black, .1);
+        border-color: $main-color;;
+        color: $main-color;
       }
     }
   }

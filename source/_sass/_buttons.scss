@@ -33,6 +33,8 @@
   display: block;
 }
 
+.button--third { width: calc(33.3% - 4px); }
+
 .button--icon-only { padding: 10px !important; }
 .button--transparent { background-color: transparent; }
 

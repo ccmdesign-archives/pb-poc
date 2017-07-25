@@ -56,6 +56,10 @@
   &--possible {
     h1 { background-color: $second-color; }
   }
+
+  &--fallback {
+    h1 { background-color: $negative-color; }
+  }
 }
 
 

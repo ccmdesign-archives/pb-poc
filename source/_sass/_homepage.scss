@@ -75,6 +75,7 @@
       -moz-appearance: none;
       appearance: none;       /* remove default arrow */
       &::-ms-expand { display: none; /* hide the default arrow in ie10 and ie11 */ }
+      max-width: 350px;
 
       font-size: 2rem;
       @include breakpoint($touch) { font-size: 1.4rem; }
@@ -115,12 +116,21 @@
     background-color: rgba(black, .7);
 
     p {
-      color: white;
+      color: rgba(white, .7);
       font-size: .8rem;
       margin: 0 auto;
       line-height: 1.6;
       @include breakpoint($large) { max-width: 70%; }
+
+      a {
+        color: white;
+        &:hover {
+          text-decoration: underline;
+          background-color: transparent;
+        }
+      }
     }
+
 
   }
 }
