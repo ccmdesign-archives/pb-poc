@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('.js-country-select').selectize();
+
     $('.js-trigger').click(function () {
       $(this).parent().toggleClass('js-active');
     });
@@ -25,7 +27,7 @@ $(document).ready(function () {
     });
 
     var single_chart_value = $('.quality-chart').attr("data-chart");
-    
+
 
     Highcharts.chart('chart1', {
         chart: {

@@ -6,7 +6,7 @@
   <section class="sidebar__main">
     {% if page.sidebar %}
     <form action="" class="sidebar__filters">
-      
+
       <fieldset class="filter filter--organizations">
         <label for="">Identifiers for...</label>
         <div class="dropdown">
@@ -20,16 +20,21 @@
           </select>
         </div>
       </fieldset>
-      
+
       <fieldset class="filter filter--countries">
         <label for="">Registered in...</label>
         <div class="dropdown">
-          <select name="" id="">
-            <option value="">Any country</option>
+          <select name="" id="" class="js-country-select">
+            <option value="1">a limited company</option>
+            <option value="2">a limited company</option>
+            <option value="3">a limited company</option>
+            <option value="4">a limited company</option>
+            <option value="5">a limited company</option>
+            <option value="6">a limited company</option>
           </select>
         </div>
       </fieldset>
-      
+
       <fieldset class="filter filter--sector">
         <label for="">Working in...</label>
         <div class="dropdown">
@@ -50,7 +55,7 @@
 
   <footer class="sidebar__footer">
     <a href="#" class="button button--block">About</a>
-    
+
     <h5>Download</h5>
     <a href="#" class="button button--third">JSON</a>
     <a href="#" class="button button--third">CSV</a>
