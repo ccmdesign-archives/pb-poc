@@ -1,10 +1,6 @@
 .homepage {
   text-align: center;
-  position: relative;
-  min-height: 100vh;
-  height: auto;
-  @include breakpoint($medium) { height: 100vh; }
-  
+  @include breakpoint($large) {height: 100vh;}
 
   &__logo {
     max-width: 421px;
@@ -106,31 +102,5 @@
     margin-top: 40px;
     display: inline-block;
     color: rgba(black, .6);
-  }
-
-  footer {
-    @include breakpoint($medium) { position: absolute; }
-    bottom: 0;
-    width: 100%;
-    padding: 30px; 
-    background-color: rgba(black, .7);
-
-    p {
-      color: rgba(white, .7);
-      font-size: .8rem;
-      margin: 0 auto;
-      line-height: 1.6;
-      @include breakpoint($large) { max-width: 70%; }
-
-      a {
-        color: white;
-        &:hover {
-          text-decoration: underline;
-          background-color: transparent;
-        }
-      }
-    }
-
-
   }
 }
