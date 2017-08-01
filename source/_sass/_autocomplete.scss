@@ -75,10 +75,11 @@
 }
 
 .filter--countries {
-  
+
+.selectize-control > input,
 .selectize-input.full {
   background-color: transparent !important;
-  height: 42px;
+  height: 42px !important;
 }
 
 .selectize-input {
@@ -97,9 +98,10 @@
     padding: 12px 0;
   }
 
+  .selectize-input,
   .item,
    > input {
-    font-size: 18px;
+    font-size: 18px !important;
     
     }
 }
