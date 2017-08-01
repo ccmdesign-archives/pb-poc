@@ -1,0 +1,124 @@
+// Customization Styles for the autocomplete plugin.
+
+.selectize-input { 
+  border: 0;
+  min-width: 200px;
+  padding: 0 30px 0 5px;
+  padding-leftt: 5px;
+
+  > input { 
+    font-weight: 300 !important; 
+    padding: 20px;
+    position: relative !important;
+  }
+}
+
+.selectize-control { display: inline-block; }
+
+.selectize-control.single .selectize-input:after {
+  content: 'keyboard_arrow_down';
+  @extend .u-material-icons;
+  display: block;
+  position: absolute;
+  padding: 0;
+  top: 10px;
+  right: 0;
+  margin-top: 0;
+  width: auto;
+  height: auto;
+  border: 0 !important;
+  line-height: .8;
+}
+
+.selectize-control.single .selectize-input.dropdown-active:after {
+  margin: 0;
+  border: 0;
+}
+
+.selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder,
+.selectize-control.plugin-drag_drop .ui-sortable-helper,
+.selectize-dropdown-header,
+.selectize-control.plugin-remove_button [data-value] .remove,
+.selectize-input,
+.selectize-input.focus,
+.selectize-input.dropdown-active,
+.selectize-dropdown,
+.selectize-dropdown [data-selectable] .highlight {
+  border-radius: 0 !important;
+  box-shadow: none;
+}
+
+// Specific Styles for the HOMEPAGE AUTOCOMPLETE
+// Repeated class selector to increase specificity.
+.homepage__select.homepage__select.homepage__select.homepage__select.homepage__select.homepage__select {
+
+.selectize-control {
+  bottom: -9px; 
+  margin-top: -9px;
+
+  &.single .selectize-input:after {
+    font-size: 2rem;
+    color: rgba($main-color, .8);
+  }
+}
+
+.selectize-input {
+  border-bottom: 2px solid rgba($main-color, .6);
+
+ .item,
+ > input {
+  font-size: 2rem;
+  color: $main-color;
+  }
+}
+
+}
+
+.filter--countries {
+  
+.selectize-input.full {
+  background-color: transparent !important;
+  height: 42px;
+}
+
+.selectize-input {
+  width: 100%;
+}
+
+.selectize-control {
+  bottom: 0; 
+  margin-top: 0;
+
+  &.single .selectize-input:after {
+    display: none;
+  }
+
+  .item {
+    padding: 12px 0;
+  }
+
+  .item,
+   > input {
+    font-size: 18px;
+    
+    }
+}
+
+.selectize-dropdown {
+  border-top: 1px solid $main-color;
+  border-color: $main-color !important;
+  top: 46px !important;
+}
+
+.selectize-dropdown,
+.selectize-dropdown-content {
+  width: 100% !important;
+}
+
+
+
+
+}
+
+
+
