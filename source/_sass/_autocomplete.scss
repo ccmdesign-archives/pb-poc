@@ -59,6 +59,8 @@
   &.single .selectize-input:after {
     font-size: 2rem;
     color: rgba($main-color, .8);
+    @include breakpoint($touch) { font-size: 1.4rem; }
+    @include breakpoint($small-only) { font-size: 1.1rem; }
   }
 }
 
@@ -67,8 +69,10 @@
 
  .item,
  > input {
-  font-size: 2rem;
   color: $main-color;
+  font-size: 2rem;
+  @include breakpoint($touch) { font-size: 1.4rem; }
+  @include breakpoint($small-only) { font-size: 1.1rem; }
   }
 }
 
