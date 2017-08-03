@@ -80,46 +80,55 @@
 
 .filter--countries {
 
-.selectize-control > input,
-.selectize-input.full {
-  background-color: transparent !important;
-  height: 42px !important;
-}
-
-.selectize-input {
-  width: 100%;
-}
-
-.selectize-control {
-  bottom: 0; 
-  margin-top: 0;
-
-  &.single .selectize-input:after {
-    display: none;
+  .selectize-control > input,
+  .selectize-input.full {
+    background-color: transparent !important;
+    height: 42px !important;
   }
 
-  .item {
-    padding: 12px 0;
+  .selectize-input {
+    width: 100%;
   }
 
-  .selectize-input,
-  .item,
-   > input {
-    font-size: 18px !important;
-    
+  .selectize-control {
+    bottom: 0; 
+    margin-top: 0;
+
+    input {
+      font-size: 18px;
+      padding: 10px 0 !important;
     }
-}
 
-.selectize-dropdown {
-  border-top: 1px solid $main-color;
-  border-color: $main-color !important;
-  top: 46px !important;
-}
+    &.single .selectize-input:after {
+      display: none;
+    }
 
-.selectize-dropdown,
-.selectize-dropdown-content {
-  width: 100% !important;
-}
+    .item {
+      padding: 12px 0;
+    }
+
+    .selectize-input,
+    .item,
+     > input {
+      font-size: 18px !important;
+      background: transparent !important;
+
+      min-height: 42px;
+    }
+
+
+  }
+
+  .selectize-dropdown {
+    border-top: 1px solid $main-color;
+    border-color: $main-color !important;
+    top: 46px !important;
+  }
+
+  .selectize-dropdown,
+  .selectize-dropdown-content {
+    width: 100% !important;
+  }
 
 
 
