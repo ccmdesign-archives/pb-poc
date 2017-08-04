@@ -1,9 +1,11 @@
 .homepage {
   text-align: center;
-  @include breakpoint($large) {height: 100vh;}
+  display: flex;
+  flex-direction: column;
 
   &__logo {
     max-width: 421px;
+    margin: 0 auto;
     width: 80%;
     @include breakpoint($small-only) { 
       width: 60%; 
@@ -21,14 +23,15 @@
 
       .material-icons {
         font-size: 1.5rem;
-
       }
     }
   }
 
   &__form {
     max-width: 60%;
+    flex: 1;
     margin: 0 auto;
+    padding-bottom: 40px;
   }
 
   &__field {
