@@ -7,7 +7,6 @@
 
     <title>{{page.title}}</title>
 
-    <link rel="stylesheet" href="{{ '/css/selectize.css' | relative_url}}">
     <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url}}">
     <script src="https://use.typekit.net/vkp7nji.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -17,14 +16,11 @@
   <body>
 
       {{content}}
-    
-    
+
+
     <div id="overlay" class="js-overlay"></div>
     <script src="{{'/vendor/jquery-2.1.4.min.js' | relative_url}}"></script>
-    <script src="{{'/vendor/selectize.min.js' | relative_url}}"></script>
+    <script src="{{'/vendor/chosen.min.js' | relative_url}}"></script>
     <script src="{{'/js/scripts.js' | relative_url}}"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
   </body>
 </html>

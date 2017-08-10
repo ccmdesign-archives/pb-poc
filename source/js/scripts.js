@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.js-country-select').selectize();
+    $('select').chosen();
 
     $('.js-trigger').click(function () {
       $(this).parent().toggleClass('js-active');
