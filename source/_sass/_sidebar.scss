@@ -10,6 +10,8 @@
     max-width: 100%;
     padding: 40px 60px;
     margin-bottom: 30px;
+
+    @include breakpoint(max-height 715px) { padding-bottom: 0px; }
   }
 
   .button {
@@ -51,6 +53,7 @@
 
 .filter {
   padding-bottom: 20px;
+  
 
   label {
     display: block;
@@ -64,5 +67,7 @@
     font-size: 18px;
     color: #333;
   }
+
+  @include breakpoint(max-height 715px) { padding-bottom: 0px; }
 }
 
