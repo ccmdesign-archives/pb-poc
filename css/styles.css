@@ -198,6 +198,18 @@ body {
     font-size: 1rem;
     opacity: .5; }
 
+.pb-yes {
+  position: relative; }
+  .pb-yes:after {
+    content: 'Drag Here';
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.1);
+    text-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 35%;
+    top: 40%; }
+
 #budget {
   color: white;
   font-size: 1.5rem;
