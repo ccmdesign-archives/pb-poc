@@ -1,0 +1,34 @@
+- id: 01
+  title: New park benches for Mont Royal
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, eligendi aliquid molestiae odit. Minus fugiat, perspiciatis. Hic iure facere a excepturi sunt, dicta et eos, iste, quas vero maiores molestiae!'
+  coords: [45.5134178,-73.5872342]
+  place: Plateau
+  price: 1000
+
+- id: 02
+  title: Mountain Bike Trail Features
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, eligendi aliquid molestiae odit. Minus fugiat, perspiciatis. Hic iure facere a excepturi sunt, dicta et eos, iste, quas vero maiores molestiae!'
+  coords: [45.5005598,-73.6061372]
+  place: Plateau
+  price: 2000
+
+- id: 03
+  title: Bixi Expansion
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, eligendi aliquid molestiae odit. Minus fugiat, perspiciatis. Hic iure facere a excepturi sunt, dicta et eos, iste, quas vero maiores molestiae!'
+  coords: 
+  place: Montreal
+  price: 3000
+
+- id: 04
+  title: New Tennis Court
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, eligendi aliquid molestiae odit. Minus fugiat, perspiciatis. Hic iure facere a excepturi sunt, dicta et eos, iste, quas vero maiores molestiae!'
+  coords: [45.517853,-73.5958304]
+  place: Plateau
+  price: 4000
+
+- id: 05
+  title: Free Beer on Wednesdays
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, eligendi aliquid molestiae odit. Minus fugiat, perspiciatis. Hic iure facere a excepturi sunt, dicta et eos, iste, quas vero maiores molestiae!'
+  coords:
+  place: Plateau
+  price: 5000

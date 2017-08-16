@@ -43,9 +43,9 @@ $large: screen and (min-width: 64em);
 }
 
 body {
-  font-family: "alwyn-new-web", sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 a {
@@ -53,6 +53,9 @@ a {
   cursor: pointer;
 }
 
+h1 {
+  font-size: 2rem;
+}
 
 p {
   line-height: 1.5;
@@ -70,7 +73,6 @@ code {
 .main-wrapper {
   position: relative;
   height: auto;
-  @include breakpoint($medium) { min-height: 100vh; }
 }
   
 

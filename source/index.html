@@ -3,60 +3,47 @@ layout: default
 title: Org Id Guide
 ---
 
-<main class="main-wrapper homepage" role="main"> <!-- main content starts here -->
-  <div class="homepage__topbar">
-    <a href="#" class="button button--icon-only button--float-right"><i class="material-icons">file_download</i></a>
-    <a href="#" class="button button--float-right button--transparent">About</a>
-  </div>
-  <img class="homepage__logo" src="/images/org-id-logo-full.png" alt="">
-  <form class="homepage__form" action="" >
-    <label class="homepage__field" for="">
-      I need identifiers for
-      <span class="homepage__select">
-        <select name="" id="">
-          <option value="">a company</option>
-          <option value="">a non-profit</option>
-          <option value="">a charity</option>
-        </select>
-      </span>
-    </label>
-    <label class="homepage__field" for="">
-      In particular
-      <span class="homepage__select">
-        <select name="" id="" class="js-country-select">
-          <option value="1">a limited company</option>
-          <option value="2">corporation</option>
-          <option value="3">charity</option>
-        </select>
-      </span>
-    </label>
-    <label class="homepage__field" for="">
-      Registered in
-      <span class="homepage__select">
-        <select name="" id="">
-          <option value="">any country</option>
-          <option value="">any country</option>
-          <option value="">any country</option>
-          <option value="">any country</option>
-        </select>
-      </span>
-    </label>
-    <label class="homepage__field" for="">
-      Working in
-      <span class="homepage__select">
-        <select name="" id="">
-          <option value="">education</option>
-          <option value="">education</option>
-          <option value="">education</option>
-          <option value="">education</option>
-        </select>
-      </span>
-    </label>
+<main class="" role="main"> <!-- main content starts here -->
+  <header class="budget-dashboard">
+    <h3>Available Budget</h3>
+    <h1 id="budget"><!--Show Remaining mudget --></h1>      
+  </header>
 
-    <div class="homepage__field">
-      <a class="homepage__button" href="/list.html" >See Lists</a>
+  <div class="main-wrapper">
+    <div class="section section--left">
+      <h1>Available Projects</h1>
+      <section class="dragula-container item-container">
+        
+        {% for i in site.data.items %}    
+        <div class="item" data-item="{{i.price}}" data-id="{{i.id}}">
+          <header>
+            <h3>{{i.title}}</h3>
+            <h4>{{i.price}}</h4>  
+          </header>
+          <p>{{i.description}}</p>
+        </div>
+        {% endfor %}  
+      </section>
     </div>
-  </form>
-  {% include footer.html %}
-</main>
+    <div class="section section--center">
+      <h1>I want these projects</h1>
+      <section id="" class="dragula-container pb-yes item-container">
+        
+      </section>
+    </div>
+  </div>
 
+  <div class="modal-wrapper">
+  {% for i in site.data.items %}    
+    <div class="modal" id="modal-{{i.id}}">
+      <header>
+        <h3>{{i.title}}</h3>
+        <h4>{{i.price}}</h4>  
+      </header>
+      <p><img src="https://previews.123rf.com/images/imagehitevo/imagehitevo1107/imagehitevo110700336/9957905-Empty-park-bench-Stock-Photo.jpg" alt=""></p>
+      <p>{{i.description}}</p>
+
+    </div>
+    {% endfor %}
+    </div>
+</main>

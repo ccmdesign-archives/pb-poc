@@ -1,81 +1,66 @@
+var drake = dragula({
+  isContainer: function (el) {
+    return el.classList.contains('dragula-container');
+  }
+});
+
 $(document).ready(function () {
-    $('select').chosen();
+  
+  var budget = 10000;
+  var spending = [];
+  var spent = 0;
+  var total = budget;
+  
+  var myPrice = 0;
 
-    $('.js-trigger').click(function () {
-      $(this).parent().toggleClass('js-active');
+  $('#budget').text('$ ' + total);
+
+  $('.dragula-container').bind('DOMNodeInserted', function() {
+    var tempSpending = [];
+
+    $('.pb-yes').children('.item').each(function (i) {
+      
+      myPrice = parseInt($(this).attr('data-item'));
+      tempSpending.push(myPrice);
     });
 
-        // Smooth Scrolling Function
-    $('a[href*=#]:not([href=#])').click(function () {
-        var $targ = $(this.hash),
-            host1 = this.hostname,
-            host2 = location.hostname,
-            path1 = this.pathname.replace(/^\//, ''),
-            path2 = location.pathname.replace(/^\//, '');
+    spent = 0;
 
-        if (!$targ.length) {
-            $targ = $('[name=' + this.hash.slice(1) + ']');
-        }
-
-        if ($targ.length && (host1 === host2 || path1 === path2)) {
-            $('html, body').animate({ scrollTop: $targ.offset().top }, 1000);
-
-            return false;
-        }
-
-        return true;
-    });
-
-    var single_chart_value = $('.quality-chart').attr("data-chart");
+    for (i in tempSpending) {
+      spent += tempSpending[i];
+    }
 
 
-    Highcharts.chart('chart1', {
-        chart: {
-            height: 264,
-            type: 'solidgauge',
-        },
+    total = budget - spent
 
-        title: {
-          text: ''
-        },
+    // console.log('budget = ' + budget);
+    console.log(tempSpending[i]);
+    console.log('total = ' + total);
+    console.log('spending = ' + spending);
+    console.log('temp = ' + tempSpending);
+    
+    $('#budget').text('$ ' + total);
 
-        tooltip: {
-            enabled: false
-        },
+    if (total < 0) {
+      $('.budget-dashboard').addClass('over-budget');
+    } else {
+      $('.budget-dashboard').removeClass('over-budget');
+    }
+  });
 
-        pane: {
-            startAngle: 0,
-            endAngle: 360,
-            background: [{
-                outerRadius: '100%',
-                innerRadius: '95%',
-            }]
-        },
+  $('.item').click(function(){
+    var id = $(this).attr('data-id');
 
-        yAxis: {
-            min: 0,
-            max: 100,
-            lineWidth: 0,
-            tickPositions: []
-        },
+    $('#modal-' + id).addClass('is-active');
+    $('.modal-wrapper').addClass('is-active');
+  });
 
-        plotOptions: {
-            solidgauge: {
-                dataLabels: {
-                    borderWidth: 0,
-                    useHTML: true
-                }
-            }
-        },
+  $('.modal-wrapper').click(function(){
+    $('.modal-wrapper').removeClass('is-active');
+    $('.modal').removeClass('is-active');
 
-        series: [{
-            data: [{
-                radius: '100%',
-                innerRadius: '95%',
-                y: [single_chart_value],
-                dataLabels: false,
-                // dataLabels: { format: '<div class="quality-chart__value">{y}</div>' },
-            }]
-        }]
-    })
+  });
+
+  
+
 }); // doc.ready

@@ -1,40 +1,143 @@
-// .main-wrapper {
-//   display: flex;
-// }
+body {
+  height: 100vh;
+}
 
-// .sidebar {
-//   width: $sidebar-width;
-
-//   @include breakpoint($touch) { display: none; }
-// }
-
-// .main-content {
-//   flex: 1;
-//   @include breakpoint($large) { padding: 40px; }
-//   @include breakpoint($touch) { padding: 20px; }
-//   @include breakpoint($small-only) { padding: 10px; }
-// }
 
 .main-wrapper {
+  display: flex;  
+  height: 94vh;
+}
+
+.section {
+  padding: 40px;
+
+  h1 {
+    margin-bottom: 40px;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  &--left {
+    flex: 2;
+  }
+
+  &--center {
+    flex: 2;
+    background-color: rgba(black, .1);
+  }
+}
+
+.budget-dashboard {
+  background-color: rgba(black, .8);
+  text-align: right;
+  height: 6vh;
+  padding: 20px;
+
+  h1, h3 {
+    text-align: center;
+    color: white;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    
+  }
+}
+
+.over-budget {
+  background-color: darken(red, 7);
+}
+
+.item-container {
+  border: 1px solid rgba(black, .2);
+  height: 90%;
+  overflow: hidden;
+  padding: 10px;
+  
   
 }
 
-.sidebar {
-  width: $sidebar-width;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  @include breakpoint($touch) { display: none; }
-}
-
-.main-content {
-  .sidebar ~ & { 
-    margin-left: $sidebar-width;
-    @include breakpoint($touch) { margin-left: 0; }
+.item {
+  display: inline-block;
+  padding: 15px;
+  margin: 5px;
+  width: calc(50% - 15px);
+  background-color: #eee;
+  border: 1px solid #aaa;
+  cursor: move;
+  box-shadow: 2px 2px 8px rgba(black, .1);
+  border-radius: 3px;
+    
+  header {
+    display: flex;  
   }
 
-  @include breakpoint($large) { padding: 40px; }
-  @include breakpoint($touch) { padding: 0; }
+  p {
+    padding: 20px 0;
+    font-size: .8rem;
+  }
+  
+
+  h3 {
+    flex: 1;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1rem;
+    opacity: .5;
+  }
 }
+
+#budget {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(black, .5);
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  left: calc(50% - 350px);
+  top: 100px;
+  background-color: white;
+  width: 700px;
+  box-shadow: 0 0 20px rgba(black, .2);
+  display: none;
+  padding: 20px;
+
+  header {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-weight: bold;
+    flex: 1;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.modal.is-active,
+.modal-wrapper.is-active {display: block !important;}
